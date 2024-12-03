@@ -9,6 +9,7 @@ public class AdvanceLocators extends DriverSetup {
     @Test
     public void testAdvanceLocator() throws InterruptedException {
         driver.get("https://www.google.com/");
+
         WebElement title = driver.findElement(By.cssSelector("textarea"));
 //        System.out.println(title.getText());
         title.sendKeys("ADDED CSS SELECTOR");
