@@ -9,16 +9,15 @@ public class DriverSetup {
 
     public WebDriver driver;
 
-
     @BeforeSuite
-    public void openBrowser() {
+    public void openBrowser () {
         // Open a browser
-        driver = new ChromeDriver();
+        driver = new ChromeDriver ();
     }
 
     @AfterSuite
-    public void closeBrowser() {
+    public void closeBrowser () {
         // Close browser
-        driver.quit();
+        driver.quit ();
     }
 }
