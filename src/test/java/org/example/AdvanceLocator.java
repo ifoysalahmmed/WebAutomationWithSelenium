@@ -55,6 +55,21 @@ public class AdvanceLocator extends DriverSetup {
                 "='pHiOh' " + "and @href" + "='https://about.google/?utm_source=google-BD&utm_medium=referral" +
                 "&utm_campaign=hp" + "-footer&fg=1" + "']")).getText ());*/
 
+
+        // //table[@id="product"]/tbody/tr/th
+
+        driver.get ("https://rahulshettyacademy.com/AutomationPractice/");
+
+        System.out.println (driver.findElement (By.cssSelector ("tr > th:nth-child(4)")).getText ());
+        System.out.println (driver.findElement (By.xpath ("//tr/th[3]")).getText ());
+
+        System.out.println (driver.findElement (By.cssSelector ("tr > th:first-child")).getText ());
+        System.out.println (driver.findElement (By.xpath ("//tr/th[1]")).getText ());
+
+        System.out.println (driver.findElement (By.cssSelector ("tr > th:last-child")).getText ());
+        System.out.println (driver.findElement (By.xpath ("//tr/th[last()]")).getText ());
+
+
         Thread.sleep (2500);
     }
 }
