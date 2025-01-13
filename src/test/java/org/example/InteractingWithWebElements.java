@@ -1,7 +1,10 @@
 package org.example;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
+
+import java.util.List;
 
 public class InteractingWithWebElements extends DriverSetup {
 
@@ -54,5 +57,16 @@ public class InteractingWithWebElements extends DriverSetup {
 
         String backgroundColor = driver.findElement (By.xpath ("//a[@id='opentab']")).getCssValue ("background-color");
         System.out.println (backgroundColor);
+
+        List<WebElement> courses = driver.findElements (By.xpath ("//table[@name='courses'] //td[2]"));
+
+        int count = 0;
+
+        for (WebElement course : courses) {
+            count++;
+            System.out.println (course.getText ());
+        }
+
+        System.out.println ("Total number of courses: " + count);
     }
 }
