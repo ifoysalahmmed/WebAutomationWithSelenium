@@ -1,7 +1,6 @@
 package org.example;
 
 import org.openqa.selenium.By;
-import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class InteractingWithWebElements extends DriverSetup {
@@ -45,10 +44,15 @@ public class InteractingWithWebElements extends DriverSetup {
         System.out.println ("After hide: " + displayState);
         */
 
+        /*
         // Check for enabled or disabled
         Boolean state = driver.findElement (By.xpath ("//a[@id='opentab']")).isEnabled ();
         System.out.println (state);
         Assert.assertTrue (state);
         Thread.sleep (2500);
+        */
+
+        String backgroundColor = driver.findElement (By.xpath ("//a[@id='opentab']")).getCssValue ("background-color");
+        System.out.println (backgroundColor);
     }
 }
